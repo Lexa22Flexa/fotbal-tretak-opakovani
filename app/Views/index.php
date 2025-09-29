@@ -28,7 +28,7 @@ foreach ($article as $row) {
     <div class="ratio ratio-1x1 position-relative overflow-hidden rounded">
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background-size: cover;background-position:center;background-image: url(<?=base_url("obrazky/sigma/".$row->photo)?>)"></div>
             <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-start text-white text-left p-3">
-            <div class="mt-auto fw-bold fs-2 text-white text-decoration-none"><?= anchor($row->link, $row->title, array('class' => 'mt-auto fw-bold fs-2 text-white text-decoration-none '.$velikost)); ?></div> <!-- PŘEDĚLAT NA ODKAZ SPRÁVNĚ!!!! -->
+            <div class="mt-auto fw-bold fs-2 text-white text-decoration-none<?=$velikost?>"><?= anchor($row->link, $row->title, array('class' => 'mt-auto fw-bold fs-2 text-white text-decoration-none '.$velikost)); ?></div> <!-- PŘEDĚLAT NA ODKAZ SPRÁVNĚ!!!! -->
             <div class="mt-3 fs-4 text-white"><?=date("d. m. Y", $row->date)?></div>
         </div>
     </div>

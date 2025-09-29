@@ -5,19 +5,18 @@
 <?=$this->endSection();?>
 
 <?=$this->section("content"); ?>
-<div class="mt-3">
+<h1 class="pt-2" style="text-align: center;">SEZÓNY SIGMA</h1>
 <?php
     $table = new \CodeIgniter\View\Table();
-    $table->setHeading("Logo", "Název", "Level");
+    $table->setHeading("Název", "Level");
 
     foreach ($leagueSeason as $row) {
         $img = array(
             "src" => base_url("obrazky/league/".$row->logo),
             "alt" => $row->name,
-            "class" => "w-100 mb-4 pt-3",
         );
-        $table->addRow(img($img), $row->name, $row->level);
-    }
+        $table->addRow(img($img)." ".$row->name, $row->level);
+    } // po rozkliknutí zobrazit tabulku game (dobrovolné)
 
     $template = array(
         'table_open' => '<table class="table table-striped table-hover table-bordered">',
@@ -44,7 +43,6 @@
 
     echo $table->generate();
     ?>
-</div>
 
 
 

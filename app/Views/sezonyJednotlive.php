@@ -7,7 +7,7 @@
 <?=$this->section("content"); ?>
 <h1 class="pt-2" style="text-align: center;">SEZÓNY SIGMA</h1>
 <?php
-    $table = new \CodeIgniter\View\Table(); //udělat ještě aj paginate a cokoliv, co znamená to seskupovat po desetiletích ==> budeme mít seskupené po desetiletích -> kliknem, vyběhne nám těch 10 roků a pak si vybereme rok a vyběhne nám, co už mám hotové->jednotlivaSezona :cc kms ==> předělat teda příště :((
+    $table = new \CodeIgniter\View\Table();
     $table->setHeading("Kdy?");
 
     
